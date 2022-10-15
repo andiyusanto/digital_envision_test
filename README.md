@@ -52,7 +52,7 @@ install npm, pm2 and mysql
    
 <!-- USAGE EXAMPLES -->
 ## Usage
-1. to acces the microservices use this credential : 
+1. to access the microservices use this credential : 
    basic auth admin : supersecretadmin
 2. export postman collection (digital_envision_test.postman_collection.json) to test the microservices
 
