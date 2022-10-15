@@ -11,7 +11,7 @@ This is DIGITAL ENVISION coding test for backend developer
 
 ### Prerequisites
 
-install npm and pm2 and mysql
+install npm, pm2 and mysql
 * npm
   ```sh
   npm install npm@latest -g
