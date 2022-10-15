@@ -35,7 +35,7 @@ install npm, pm2 and mysql
    ```sh
    npm install
    ```
-3. export the dump**.sql
+3. export dump**.sql
    
 4. run the microservices `
    ```js
@@ -52,7 +52,7 @@ install npm, pm2 and mysql
    
 <!-- USAGE EXAMPLES -->
 ## Usage
-1. to access the microservices use this credential : 
+1. to access microservices use this credential : 
    basic auth admin : supersecretadmin
-2. export postman collection (digital_envision_test.postman_collection.json) to test the microservices
+2. export postman collection (digital_envision_test.postman_collection.json) to test microservices
 
