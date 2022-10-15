@@ -60,3 +60,8 @@ install npm, pm2 and mysql
    basic auth admin : supersecretadmin
 2. export postman collection (digital_envision_test.postman_collection.json) to test microservices
 
+<!-- USAGE EXAMPLES -->
+## Flow Explanation
+1. microservices will do CRUD for data users
+2. every day at 1 AM worker init will save every users data that have equal birthday date whith current date
+3. every minute worker sender will send birthday messages to users who has the same local time to 9 AM
