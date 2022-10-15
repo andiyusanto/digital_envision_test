@@ -50,5 +50,5 @@ install npm and pm2 and mysql
    
 <!-- USAGE EXAMPLES -->
 ## Usage
-to acces the microseervices use this credential : 
+to acces the microservices use this credential : 
 basic auth admin : supersecretadmin
