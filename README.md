@@ -41,13 +41,17 @@ install npm, pm2 and mysql
    ```js
    pm2 start receiver.yml
    ```
-5. run init worker`
+5. run worker init `
    ```js
    pm2 start worker_init.yml
    ```
-6. run sender worker `
+6. run worker sender `
    ```js
    pm2 start worker_sender.yml
+   ```
+7. save pm2 node`
+   ```js
+   pm2 save
    ```
    
 <!-- USAGE EXAMPLES -->
