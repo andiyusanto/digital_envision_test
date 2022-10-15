@@ -35,20 +35,24 @@ install npm, pm2 and mysql
    ```sh
    npm install
    ```
-3. run the microservices `
+3. export the dump**.sql
+   
+4. run the microservices `
    ```js
    pm2 start receiver.yml
    ```
-4. run init worker`
+5. run init worker`
    ```js
    pm2 start worker_init.yml
    ```
-5. run sender worker `
+6. run sender worker `
    ```js
    pm2 start worker_sender.yml
    ```
    
 <!-- USAGE EXAMPLES -->
 ## Usage
-to acces the microservices use this credential : 
-basic auth admin : supersecretadmin
+1. to acces the microservices use this credential : 
+   basic auth admin : supersecretadmin
+2. export postman collection to test the microservices
+
