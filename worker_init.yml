@@ -1,5 +1,5 @@
 apps:
-  - script : './worker/worker_init'
+  - script : './workers/worker_init.js'
     name : 'digital_envision_test_worker_init'
     watch  : false
     instances: 1

@@ -17,19 +17,15 @@ var timezonesListRouter = require('./routes/timezone/timezones_list');
 
 
 var app = express();
-const userAuth = process.env.AUTHUSER || 'admin';
-const userPass = process.env.AUTHUSER || 'supersecretadmin';
-
 app.set('json spaces', 0);
 app.set('trust proxy', 'loopback');
 app.use(helmet());
-app.use(basicAuth({
-  users: { userAuth: userPass }
-}))
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
-// app.use(bearerToken());
+app.use(basicAuth({
+  users: { 'admin' : 'supersecretadmin' }
+}));
 
 // stampin middleware
 app.use(async (req, res, next) => {
@@ -71,7 +67,6 @@ app.use(async (req, res, next) => {
   console.log(`${JSON.stringify(req.payload)}\n`);
 
   res.status(200).json(req.payload);
-  // next();
 });
 
 // stampout, final output middleware
@@ -85,16 +80,8 @@ app.use(async (err, req, res, next) => {
     req.payload.metadata.responseTimestamp = new Date().toLocaleString('id-ID');
   }
 
-  console.log(`${JSON.stringify(req.payload)}\n`);
-  // await app.get('db').logs.insert({
-  //   app_id: (req.user && req.user.appId) ? req.user.appId :req.payload.metadata.clientIp,
-  //   body: req.payload,
-  //   mid: req.id,
-  // }).catch((err) => {
-  //   console.error('Failed Saving logs ', err);
-  // });
+  console.log(`${JSON.stringify(req.payload)}\n`);  
   res.status(200).json(req.payload);
-  // next();
 });
 
 module.exports = app;

@@ -1,5 +1,5 @@
 apps:
-  - script : './worker/worker_sender'
+  - script : './workers/worker_sender.js'
     name : 'digital_envision_test_worker_sender'
     watch  : false
     instances: 1

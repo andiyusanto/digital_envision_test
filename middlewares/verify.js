@@ -1,7 +1,5 @@
 /* eslint require-jsdoc: [0] */
 const AppError = require('http-errors');
-// const jwt = require('jsonwebtoken');
-// const Utils = require('../libs/utils');
 
 async function allowedIP(req, res, next) {
   const clientIP = req.payload.metadata.clientIp;

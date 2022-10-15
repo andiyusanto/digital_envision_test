@@ -7,7 +7,7 @@ const initDataModel = require('../models/init_data');
 
 console.log('This is scheduler worker that run every dat at 1 AM, to save users data that have birthday today.');
 
-const job = schedule.scheduleJob('0 0 3 * *', async function(fireDate){
+const job = schedule.scheduleJob('0 1 * * *', async function(fireDate){
     console.log('run at ' + fireDate);
     await initDataToSendBirthdayMessage();
 });
