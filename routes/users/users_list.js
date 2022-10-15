@@ -18,7 +18,7 @@ router.get(['/','/:offset/:limit'], async function(req, res, next) {
     'order': [
       ['id', 'ASC'],
     ],
-    'offset': offset, 'limit': limit 
+    'offset': parseInt(offset), 'limit': parseInt(limit) 
   });
   const totalData = await users.count();
 
