@@ -1,0 +1,16 @@
+apps:
+  - script : './bin/www'
+    name : 'digital_envision_test_end_point'
+    watch  : false
+    instances: 1
+    exec_mode: cluster
+    instance_var: 'INSTANCE_ID'
+    env    :
+      NODE_ENV: production
+      PORT: 3001
+      AUTHUSER: 'admin'
+      AUTHPASS: 'supersecretadmin'
+      MYSQL_HOST: '127.0.0.1'
+      MYSQL_DB: digital_envision_test
+      MYSQL_USER: root
+      MYSQL_PASS: 'root'
