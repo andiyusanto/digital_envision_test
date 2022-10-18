@@ -10,10 +10,10 @@ const messsagesModel = require('../models/messsages');
 console.log('This is scheduler worker that run every minute, to send birthday message.');
 
 sendBirthdayMessage();
-// const job = schedule.scheduleJob('0 0 3 * *', async function(fireDate){
-//     console.log('run at ' + fireDate);
-//     await sendBirthdayMessage();
-// });
+const job = schedule.scheduleJob('* * * * *', async function(fireDate){
+    console.log('run at ' + fireDate);
+    await sendBirthdayMessage();
+});
 
 async function sendBirthdayMessage(){
     const users = await userModel.getUsers(dbMysql);
