@@ -9,9 +9,10 @@ const responseDesc = {
     rdNotFound : 'Data Not Exist',
     rdNotValidFN : 'Invalid first name Value',
     rdNotValidLN : 'Invalid last name Value',
-    rdNotValidBD : 'Invalid birthdate date Value',
+    rdNotValidBD : 'Invalid birthday date Value',
     rdNotValidLoc : 'Invalid location Value, check /timezone/[timezoneId] end point',
     rdNotValidUserId: 'Invalid User Id',
+    rdNotValidTZId: 'Invalid Tomezone Id',
 }
 
 module.exports = {
