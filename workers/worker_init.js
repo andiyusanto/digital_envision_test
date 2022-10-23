@@ -19,7 +19,7 @@ const queryInsertInitData = 'INSERT INTO INIT_DATA (id_user, id_message, process
             '    AND id_message = :id_message AND processing_date = :processing_date '+
             ') LIMIT 1';
 
-const job = schedule.scheduleJob('* * * * *', async function(fireDate){
+const job = schedule.scheduleJob('* 1 * * *', async function(fireDate){
     console.log('run at ' + fireDate);
     await initDataToSendMessage('birthday_message');
 });
